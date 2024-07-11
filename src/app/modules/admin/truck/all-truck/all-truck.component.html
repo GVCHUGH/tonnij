@@ -1,0 +1,69 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 p-0">
+            <div class="sub-header d-flex justify-content-between">
+                <div class="sub-header--left">
+                    <span>Trucks List</span>
+                </div>
+                <div class="sub-header--right">
+                    <span>Last Login : Jul 4, 2024, 7:48:41 PM</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-3 px-3">
+            <div class="content-area">
+                <div class="content-area--header px-3 d-flex justify-content-between align-items-center">
+                    <h3 class="m-0">List of Trucks</h3>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-add" routerLink="/add-truck">+ Add Truck</button>
+                    </div>
+                </div>
+                <div class="content-area--section">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th style="width: 6%;">S.No</th>
+                                <th style="width: 12%;">Unit No</th>
+                                <th style="width: 14%;">Make</th>
+                                <th style="width: 14%;">Model</th>
+                                <th style="width: 18%;">License Plate</th>
+                                <th style="width: 12%;">LNS Expiry Date</th>
+                                <th style="width: 12%;">MVI Expiry Date</th>
+                                <th style="width: 6%;" class="text-center">Status</th>
+                                <th style="width: 6%;" class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]; let i = index">
+                                <td>{{i + 1}}</td>
+                                <td>100</td>
+                                <td>Toyota</td>
+                                <td>2010</td>
+                                <td>DL2342242345343</td>
+                                <td>Jul 13, 2024</td>
+                                <td>Jul 13, 2024</td>
+                                <td>
+                                    <div class="d-flex justify-content-center">
+                                        <label class="switch" [for]="i">
+                                            <input type="checkbox" [id]="i">
+                                            <span class="slider round"></span>
+                                        </label>
+                                      </div>
+                                </td>
+                                <td class="text-center">
+                                    <button mat-button [matMenuTriggerFor]="menu" class="btn">
+                                        <img src="../../../../../assets/icons/menu-icon.svg" alt="">
+                                    </button>
+                                    <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>Update</button>
+                                    <button mat-menu-item>Delete</button>
+                                    </mat-menu>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>      
+            </div>
+        </div>
+    </div>
+</div>

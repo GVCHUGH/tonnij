@@ -1,0 +1,139 @@
+.auth-page{
+    &--banner{
+        width: calc(100dvw - 37.5rem);  //100dvw - 600px
+        height: 100dvh;
+        &_section{
+            background-color: #d6ffff;
+            background: #d6ffff url(../../../../assets/images/auth-banner.svg);
+            background-repeat: no-repeat;
+            background-position: left -40px;
+            background-size: cover;
+        }
+    }
+    &--login{
+        width: 37.5rem;  //600px
+        box-shadow: 0 4px 4px 0 #00000025;
+        &_page{
+            padding: 40px 40px 10px;
+            .logo{
+                img{
+                    width: 26%;
+                }
+            }
+            .form{
+                &-header{
+                    h4{
+                        color: #009393;
+                        font-weight: 400;
+                        font-size: 1.75rem;
+                    }
+                    h2{
+                        color: #009393;
+                        font-weight: 700;
+                    }
+                    p{
+                        color: #626262;
+                    }
+                }
+                &-section{
+                    .inp-field{
+                        .label{
+                            color: #000;
+                            font-size: 0.875rem;
+                            font-weight: 500;
+                        }
+                        &--area{
+                            border: 1px solid #E7E7E7;
+                            border-radius: 6px;
+                            padding-left: 10px;
+                            .form-control{
+                                border: none;
+                                font-size: 0.875rem;
+                                height: 40px;
+                                &:focus{
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                        .remember{
+                            .form-check-input{
+                                &:checked{
+                                    background-color: #009393;
+                                    border-color: #009393;
+                                }
+                                &:focus{
+                                    box-shadow: none;
+                                }
+                            }
+                            label{
+                                font-size: 0.875rem;
+                            }
+                        }
+                        .forgot{
+                            a{
+                                color: #009393;
+                                font-size: 0.875rem;
+                                text-decoration: none;
+                                &:focus{
+                                    outline: none;
+                                }
+                                &:focus-visible{
+                                    outline: none;
+                                    border-bottom: 1px solid #009393;
+                                }
+                            }
+                        }
+                    }
+                    .register{
+                        p{
+                            color: #626262;
+                            font-size: 0.875rem;
+                            a{
+                                color: #009393;
+                                text-decoration: none;
+                                &:focus{
+                                    outline: none;
+                                }
+                                &:focus-visible{
+                                    outline: none;
+                                    border-bottom: 1px solid #009393;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &-footer{
+                &--link{
+                   &_span{
+                    gap: 20px;
+                    a{
+                        color: #929292;
+                        font-size: 0.75rem;
+                        text-decoration: none;
+                        &:not(:last-child){
+                            position: relative;
+                            &::after{
+                                content: '';
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background-color: #929292;
+                                position: absolute;
+                                right: -12px;
+                                top: 40%;
+                            }
+                        }
+                    }
+                   } 
+                }
+                &--maker{
+                    p{
+                        color: #626262;
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+    }
+}

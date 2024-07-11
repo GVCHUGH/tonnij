@@ -1,0 +1,334 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 p-0">
+            <div class="sub-header d-flex justify-content-between">
+                <div class="sub-header--left">
+                    <span>Dashboard</span>
+                </div>
+                <div class="sub-header--right">
+                    <span>Last Login : Jul 4, 2024, 7:48:41 PM</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 p-0">
+            <div class="row mx-1 mt-3">
+                <div class="col-md-2 pe-0" (click)="getTableData('Driver')">
+                    <div class="card main-card d-flex flex-row align-items-center gap-3" [ngClass]="tableHeading == 'Driver' ? 'active-card' : ''">
+                        <div class="thumbnail d-flex justify-content-center align-items-center">
+                            <img src="../../../../assets/icons/driver-icon.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="m-0">Driver(s)</p>
+                            <span>20</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 pe-0" (click)="getTableData('Truck')">
+                    <div class="card main-card d-flex flex-row align-items-center gap-3" [ngClass]="tableHeading == 'Truck' ? 'active-card' : ''">
+                        <div class="thumbnail d-flex justify-content-center align-items-center">
+                            <img src="../../../../assets/icons/truck-icon.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="m-0">Truck(s)</p>
+                            <span>20</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 pe-0" (click)="getTableData('Trailer')">
+                    <div class="card main-card d-flex flex-row align-items-center gap-3" [ngClass]="tableHeading == 'Trailer' ? 'active-card' : ''">
+                        <div class="thumbnail d-flex justify-content-center align-items-center">
+                            <img src="../../../../assets/icons/trailer-icon.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="m-0">Trailer(s)</p>
+                            <span>20</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 pe-0" (click)="getTableData('Vendor')">
+                    <div class="card main-card d-flex flex-row align-items-center gap-3" [ngClass]="tableHeading == 'Vendor' ? 'active-card' : ''">
+                        <div class="thumbnail d-flex justify-content-center align-items-center">
+                            <img src="../../../../assets/icons/vendor-icon.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="m-0">Vendor(s)</p>
+                            <span>20</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 pe-0" (click)="getTableData('Customer')">
+                    <div class="card main-card d-flex flex-row align-items-center gap-3" [ngClass]="tableHeading == 'Customer' ? 'active-card' : ''">
+                        <div class="thumbnail d-flex justify-content-center align-items-center">
+                            <img src="../../../../assets/icons/customer-icon.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="m-0">Customer(s)</p>
+                            <span>20</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2" (click)="getTableData('Payables and Receivable')">
+                    <div class="card main-card d-flex flex-row align-items-center gap-3" [ngClass]="tableHeading == 'Payables and Receivable' ? 'active-card' : ''">
+                        <div class="thumbnail d-flex justify-content-center align-items-center">
+                            <img src="../../../../assets/icons/driver-icon.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="m-0">Payables and Receivables</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 p-0">
+            <div class="row mx-1 mt-3">
+                <div class="col-md-2 pe-0">
+                    <div class="card sub-card d-flex flex-row align-items-center gap-3">
+                        <div class="content">
+                            <p class="m-0">Driver License</p>
+                            <div class="d-flex gap-3">
+                                <span>Expriring - <span class="expiring">1</span></span>
+                                <span>Exprired - <span class="expired">1</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 pe-0">
+                    <div class="card sub-card d-flex flex-row align-items-center gap-3">
+                        <div class="content">
+                            <p class="m-0">Trailer MVI</p>
+                            <div class="d-flex gap-3">
+                                <span>Expriring - <span class="expiring">1</span></span>
+                                <span>Exprired - <span class="expired">1</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 pe-0">
+                    <div class="card sub-card d-flex flex-row align-items-center gap-3">
+                        <div class="content">
+                            <p class="m-0">Truck Insurance</p>
+                            <div class="d-flex gap-3">
+                                <span>Expriring - <span class="expiring">1</span></span>
+                                <span>Exprired - <span class="expired">1</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 pe-0">
+                    <div class="card sub-card d-flex flex-row align-items-center gap-3">
+                        <div class="content">
+                            <p class="m-0">Truck MVI</p>
+                            <div class="d-flex gap-3">
+                                <span>Expriring - <span class="expiring">1</span></span>
+                                <span>Exprired - <span class="expired">1</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 pe-0">
+                    <div class="card sub-card d-flex flex-row align-items-center gap-3">
+                        <div class="content">
+                            <p class="m-0">Trailer Insurance</p>
+                            <div class="d-flex gap-3">
+                                <span>Expriring - <span class="expiring">1</span></span>
+                                <span>Exprired - <span class="expired">1</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 pe-0">
+                    <div class="card sub-card d-flex flex-row align-items-center gap-3">
+                        <div class="content">
+                            <p class="m-0">Trailer Insurance</p>
+                            <div class="d-flex gap-3">
+                                <span>Expriring - <span class="expiring">1</span></span>
+                                <span>Exprired - <span class="expired">1</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-3 px-3">
+            <div class="content-area">
+                <div class="content-area--header px-3 d-flex justify-content-between align-items-center">
+                    <h3 class="m-0">{{tableHeading + 's'}}</h3>
+                    <button class="btn btn-add" [routerLink]="'/add-' + (tableHeading | lowercase)" *ngIf="tableHeading != 'Payables and Receivable'">+ Add {{tableHeading}}</button>
+                </div>
+                <div *ngIf="tableHeading == 'Payables and Receivable'">
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                        <mat-tab label="Payables">
+                            <div class="content-area--section content-area--section__tabs">
+                                <table class="table table-striped table-hover" *ngIf="tableHeading == 'Payables and Receivable'">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 20%;">Invoive No.</th>
+                                            <th style="width: 20%;">Order No.</th>
+                                            <th style="width: 20%;">Company Name</th>
+                                            <th style="width: 20%;">Grand Total</th>
+                                            <th style="width: 20%;">Balance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12,13]; let i = index;">
+                                            <td>{{i + 1}}</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Receivables">
+                            <div class="content-area--section content-area--section__tabs">
+                                <table class="table table-striped table-hover" *ngIf="tableHeading == 'Payables and Receivable'">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 20%;">Invoive No.</th>
+                                            <th style="width: 20%;">Order No.</th>
+                                            <th style="width: 20%;">Company Name</th>
+                                            <th style="width: 20%;">Grand Total</th>
+                                            <th style="width: 20%;">Balance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="5">
+                                                <div class="no-data d-flex flex-column align-items-center p-3 gap-3">
+                                                    <img src="../../../../assets/icons/no-data.svg" alt="" width="100">
+                                                    No Data Found
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </mat-tab>
+                      </mat-tab-group>
+                </div>
+                <div class="content-area--section"  *ngIf="tableHeading != 'Payables and Receivable'">
+                    <table class="table table-striped table-hover" *ngIf="tableHeading == 'Driver'">
+                        <thead>
+                            <tr>
+                                <th style="width: 20%;">Driver Name</th>
+                                <th style="width: 26%;">Phone | Email</th>
+                                <th style="width: 12%;">License Expiry</th>
+                                <th style="width: 12%;">License Preview</th>
+                                <th style="width: 12%;" class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12,13]">
+                                <td>Rajendra Rohilla</td>
+                                <td>8976568976 | shine@gmail.com</td>
+                                <td>Jul 13, 2024</td>
+                                <td><span class="preview">Preview</span></td>
+                                <td class="text-center">
+                                    <img class="action" src="../../../../assets/icons/edit-icon.svg" alt="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-striped table-hover" *ngIf="tableHeading == 'Truck'">
+                        <thead>
+                            <tr>
+                                <th style="width: 12%;">Unit No.</th>
+                                <th style="width: 18%;">Make | Model</th>
+                                <th style="width: 20%;">License Plate</th>
+                                <th style="width: 18%;">Insurance Expiry</th>
+                                <th style="width: 17%;">MVI Expiry</th>
+                                <th style="width: 15%;" class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12,13]">
+                                <td>100</td>
+                                <td>Toyota | 2010</td>
+                                <td>DL234222345343</td>
+                                <td>Jul 13, 2024</td>
+                                <td>Jul 13, 2024</td>
+                                <td class="text-center">
+                                    <img class="action" src="../../../../assets/icons/edit-icon.svg" alt="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-striped table-hover" *ngIf="tableHeading == 'Trailer'">
+                        <thead>
+                            <tr>
+                                <th style="width: 12%;">Unit No.</th>
+                                <th style="width: 18%;">Make | Model</th>
+                                <th style="width: 20%;">License Plate</th>
+                                <th style="width: 18%;">Insurance Expiry</th>
+                                <th style="width: 17%;">MVI Expiry</th>
+                                <th style="width: 15%;" class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12,13]">
+                                <td>100</td>
+                                <td>Toyota | 2010</td>
+                                <td>DL234222345343</td>
+                                <td>Jul 13, 2024</td>
+                                <td>Jul 13, 2024</td>
+                                <td class="text-center">
+                                    <img class="action" src="../../../../assets/icons/edit-icon.svg" alt="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-striped table-hover" *ngIf="tableHeading == 'Vendor'">
+                        <thead>
+                            <tr>
+                                <th style="width: 16%;">Company Name</th>
+                                <th style="width: 16%;">Contact Person Name</th>
+                                <th style="width: 20%;">Phone | Email</th>
+                                <th style="width: 20%;">GST</th>
+                                <th style="width: 12%;">Favourite</th>
+                                <th style="width: 16%;" class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12,13]">
+                                <td>Rajendra Pvt. Ltd.</td>
+                                <td>Rajendra Rohilla</td>
+                                <td>8976568976 | shine@gmail.com</td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-center">
+                                    <img class="action" src="../../../../assets/icons/edit-icon.svg" alt="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-striped table-hover" *ngIf="tableHeading == 'Customer'">
+                        <thead>
+                            <tr>
+                                <th style="width: 16%;">Company Name</th>
+                                <th style="width: 16%;">Contact Person Name</th>
+                                <th style="width: 20%;">Phone | Email</th>
+                                <th style="width: 20%;">GST</th>
+                                <th style="width: 12%;">Favourite</th>
+                                <th style="width: 16%;" class="text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12,13]">
+                                <td>Rajendra Pvt. Ltd.</td>
+                                <td>Rajendra Rohilla</td>
+                                <td>8976568976 | shine@gmail.com</td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-center">
+                                    <img class="action" src="../../../../assets/icons/edit-icon.svg" alt="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>      
+            </div>
+        </div>
+    </div>
+</div>

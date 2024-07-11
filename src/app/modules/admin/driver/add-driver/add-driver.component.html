@@ -1,0 +1,123 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 p-0">
+            <div class="sub-header d-flex justify-content-between">
+                <div class="sub-header--left">
+                    <span>Add New Driver</span>
+                </div>
+                <div class="sub-header--right">
+                    <span>Last Login : Jul 4, 2024, 7:48:41 PM</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-3 px-3">
+            <div class="content-area">
+                <div class="content-area--header px-3 d-flex justify-content-between align-items-center">
+                    <h3 class="m-0">Add Driver</h3>
+                </div>
+                <div class="content-area--section">
+                    <div class="d-flex justify-content-between gap-2 px-3">
+                        <div class="inp-field">
+                            <label for="" class="label">Driver Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="inp-field">
+                            <label for="" class="label">Cellphone Number</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="inp-field">
+                            <label for="" class="label">Email</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="inp-field">
+                            <label for="" class="label">Building Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="inp-field">
+                            <label for="" class="label">Street Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between gap-2 px-3">
+                        <div class="inp-field mt-2">
+                            <label for="" class="label">City</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="inp-field mt-2 d-flex flex-column justify-content-between">
+                            <label for="" class="label">Province</label>
+                            <mat-form-field appearance="outline">
+                                <mat-select>
+                                    <mat-option value="Alberta">Alberta</mat-option>
+                                    <mat-option value="Manitoba">Manitoba</mat-option>
+                                    <mat-option value="Yukon">Yukon</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+                        <div class="inp-field mt-2">
+                            <label for="" class="label">Postal Code</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="inp-field mt-2">
+                            <label for="" class="label">SIN</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="inp-field mt-2">
+                            <label for="" class="label">License Number</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 px-3">
+                        <div class="inp-field mt-2 d-flex flex-column">
+                            <label for="" class="label">License Expiry date</label>
+                            <mat-form-field appearance="outline">
+                                <input matInput [matDatepicker]="licenseExpire">
+                                <mat-datepicker-toggle matIconSuffix [for]="licenseExpire"></mat-datepicker-toggle>
+                                <mat-datepicker #licenseExpire></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="inp-field mt-2 d-flex flex-column">
+                            <label for="" class="label">Hiring Date</label>
+                            <mat-form-field appearance="outline">
+                                <input matInput [matDatepicker]="hiringDate">
+                                <mat-datepicker-toggle matIconSuffix [for]="hiringDate"></mat-datepicker-toggle>
+                                <mat-datepicker #hiringDate></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="inp-field mt-2 d-flex flex-column">
+                            <label for="" class="label">Leaving Date</label>
+                            <mat-form-field appearance="outline">
+                                <input matInput [matDatepicker]="leavingDate">
+                                <mat-datepicker-toggle matIconSuffix [for]="leavingDate"></mat-datepicker-toggle>
+                                <mat-datepicker #leavingDate></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="inp-field mt-2 d-flex flex-column">
+                            <label for="" class="label">Date of Birth</label>
+                            <mat-form-field appearance="outline">
+                                <input matInput [matDatepicker]="dob">
+                                <mat-datepicker-toggle matIconSuffix [for]="dob"></mat-datepicker-toggle>
+                                <mat-datepicker #dob></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 px-3">
+                        <div class="inp-field mt-2 d-flex flex-column">
+                            <label for="" class="label">Upload License</label>
+                            <label for="file-upload" class="file-uploader d-flex justify-content-between align-items-center ps-3 mt-1">
+                                <span class="text">Upload</span>
+                                <span class="icon d-flex justify-content-center align-items-center">
+                                    <img src="../../../../../assets/icons/upload-icon.svg" alt="">
+                                </span>
+                            </label>
+                            <input type="file" id="file-upload" class="form-control" hidden>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end gap-2 px-3 mb-2">
+                        <button class="btn btn-secondary">Reset</button>
+                        <button class="btn btn-primary">Add Driver</button>
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </div>
+</div>

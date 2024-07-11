@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 p-0">
+            <div class="header d-flex justify-content-between">
+                <div class="header-left d-flex align-items-center gap-3">
+                    <div class="header-left--logo">
+                        <img src="../../../../assets/images/logo.png" alt="">
+                    </div>
+                    <div class="header-left--menu d-flex" *ngIf="commonService.profileUpdated">
+                        <div class="header-left--menu__section position-relative d-flex flex-column align-items-center justify-content-center" *ngFor="let menu of menuList; let last = last" [class.last-item]="last" [routerLink]="menu.routerLink">
+                            <div class="d-flex align-items-center gap-2">
+                                <img [src]="menu.menuIcon" alt="">
+                                <img class="mt-1" src="../../../../assets/icons/down-arrow-icon.svg" alt=""  *ngIf="menu.menuItem == 'Home'" width="8">
+                            </div>
+                            <span>{{menu.menuItem}}</span>
+                            <div class="sub-menu d-flex flex-column">
+                                <span *ngFor="let item of menu.subMenu" [routerLink]="item.route">{{item.subMenuItem}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right d-flex align-items-center">
+                    <div class="header-right--user d-flex align-items-center gap-2">
+                        <div class="header-right--user__icon d-flex justify-content-center align-items-center">
+                            <img src="../../../../assets/icons/user-icon.svg" alt="">
+                        </div>
+                        <div class="header-right--user__name d-flex gap-2">
+                            <span>Joginder Malhotra</span>
+                            <img src="../../../../assets/icons/down-arrow-icon.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

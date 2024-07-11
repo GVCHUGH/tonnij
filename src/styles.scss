@@ -1,0 +1,403 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Poppins', sans-serif; }
+.btn{
+    &-primary{
+        background-color: #009393 !important;
+        border-color: #009393 !important;
+        font-size: 0.875rem;
+        height: 35px;
+        font-weight: 500;
+        &:hover{
+            background-color: darken($color: #009393, $amount: 5) !important;
+        }
+        &:active{
+            background-color: darken($color: #009393, $amount: 10) !important;
+        }
+        &:focus{
+            background-color: darken($color: #009393, $amount: 10) !important;
+        }
+        &:focus-visible{
+            background-color: darken($color: #009393, $amount: 10) !important;
+            box-shadow: none;
+        }
+    }
+    &-secondary{
+        background-color: #C1F4F4 !important;
+        border-color: #C1F4F4 !important;
+        color: #009393;
+        font-size: 0.875rem;
+        height: 35px;
+        font-weight: 500;
+        &:hover{
+            background-color: darken($color: #009393, $amount: 5) !important;
+        }
+        &:active{
+            background-color: darken($color: #009393, $amount: 10) !important;
+        }
+        &:focus{
+            background-color: darken($color: #009393, $amount: 10) !important;
+            color: #fff;
+        }
+        &:focus-visible{
+            background-color: darken($color: #009393, $amount: 10) !important;
+            box-shadow: none;
+        }
+    }
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #009393; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: darken($color: #009393, $amount: 5); 
+  }
+
+  .sub-header{
+    background-color: #009393;
+    padding: 3px 20px;
+    &--left{
+        span{
+            font-size: 0.875rem;
+            color: #fff;
+        }
+    }
+    &--right{
+        span{
+            font-size: 0.75rem;
+            color: #fff;
+        }
+    }
+}
+
+.content-area{
+  border: 1px solid #EBEBEB;
+  border-radius: 5px;
+  &--header{
+      background-color: #009393;
+      border-radius: 5px 5px 0 0;
+      height: 40px;
+      h3{
+          color: #fff;
+          font-size: 1rem;
+      }
+      .btn-add{
+          background-color: #fff;
+          font-size: 0.875rem;
+          padding: 3px 15px;
+          &:hover{
+              background-color: #009393;
+              border-color: #fff;
+              color: #fff;
+          }
+          &:active{
+              border-color: #fff;
+              scale: 0.98;
+          }
+      }
+  }
+  &--section{
+      padding: 0 2px 5px;
+      // max-height: 54dvh;
+      overflow: auto;
+      margin-top: 15px;
+      .table{
+          margin-bottom: 0;
+          thead{
+              position: sticky;
+              top: 0;
+              z-index: 99;
+              tr{
+                  th{
+                      background-color: #EBEBEB;
+                      vertical-align: middle;
+                      font-weight: 600;
+                      font-size: 0.875rem;
+                  }
+              }
+          }
+          tbody{
+              tr{
+                  &:nth-child(odd){
+                      td{
+                          background-color: #ffffff;
+                      }
+                      &:hover{
+                          td{
+                              background-color: #0093931a;
+                          }
+                      }
+                  }
+                  &:nth-child(even){
+                      td{
+                          background-color: #0093931a;
+                      }
+                  }
+                  td{
+                      vertical-align: middle;
+                      color: #626262;
+                      font-size: 0.875rem;
+                      word-break: break-word;
+                      .preview{
+                          color: #009393;
+                          text-transform: uppercase;
+                          cursor: pointer;
+                      }
+                      .action{
+                          cursor: pointer;
+                          width: 7%;
+                      }
+                  }
+              }
+          }
+      }
+  }
+}
+
+// toggle button
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 22px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc !important;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 3.2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #86ac1f  !important;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #86ac1f !important;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px !important;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  // width: 45px;
+  // height: 22px;
+  width: 40px;
+  height: 18px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc !important;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: -1px;
+  bottom: -0.8px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #009393  !important;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #009393 !important;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px !important;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+// End Toggle Button
+
+//Material Style
+.mat-mdc-form-field-infix{
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  min-height: 40px !important;
+}
+.mat-mdc-form-field-subscript-wrapper{
+  display: none;
+}
+.mdc-notched-outline__leading{
+  border-color: #EBEBEB !important;
+}
+.mdc-notched-outline__trailing{
+  border-color: #EBEBEB !important;
+}
+.mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper{
+  height: 40px;
+}
+.mat-mdc-icon-button.mat-mdc-button-base{
+  --mdc-icon-button-state-layer-size: 40px;
+  padding: 8px;
+}
+//End Matrial Style
+
+
+.inp-field{
+  width: 19.55%;
+  .label{
+      font-size: 0.875rem;
+  }
+  .form-control{
+      border-color: #EBEBEB;
+      height: 40px;
+      &:focus{
+          box-shadow: none;
+          border-color: #009393;
+      }
+  }
+}
+.file-uploader{
+  border: 1px solid #EBEBEB;
+  height: 40px;
+  border-radius: 3px;
+  cursor: pointer;
+  .text{
+      color: #AFAFAF;
+      font-size: 0.875rem;
+  }
+  .icon{
+      background-color: #D9D9D9;
+      height: 40px;
+      width: 35px;
+      border-radius:  0 3px 3px 0;
+  }
+}
+
+.checkbox-label{
+  border: 1px solid #EBEBEB;
+  width: 100%;
+  padding-left: 40px;
+  height: 40px;
+  font-size: 0.875rem;
+  border-radius: 5px;
+  &:hover{
+      border-color: #00939350;
+  }
+}
+.checkbox-input{
+  top: 12px;
+  left: 15px;
+  &:checked{
+      background-color: #009393;
+  }
+  &:focus{
+      box-shadow: none;
+  }
+  &:checked + label{
+      background-color: #00939325;
+  }
+}
+.no-data{
+  font-size: 1.25rem;
+}
+
+// Material tabs
+
+.mdc-tab--active{
+  .mat-mdc-tab-ripple{
+    background-color: #009393;
+  }
+  .mdc-tab__text-label{
+    color: #fff !important;
+  }
+  .mdc-tab-indicator__content{
+    border-color: #009393 !important;
+  }
+}
+
+
+
+// End Material tabs

@@ -1,0 +1,88 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 p-0">
+            <div class="sub-header d-flex justify-content-between">
+                <div class="sub-header--left">
+                    <span>Add New Trailer</span>
+                </div>
+                <div class="sub-header--right">
+                    <span>Last Login : Jul 4, 2024, 7:48:41 PM</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-3 px-3">
+            <div class="content-area">
+                <div class="content-area--header px-3 d-flex justify-content-between align-items-center">
+                    <h3 class="m-0">Add Trailer</h3>
+                </div>
+                <div class="content-area--section">
+                    <div class="d-flex justify-content-between gap-2 px-3">
+                        <div class="inp-field">
+                            <label for="" class="label">Unit Number</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="inp-field">
+                            <label for="" class="label">Make</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="inp-field d-flex flex-column justify-content-between">
+                            <label for="" class="label">Model</label>
+                            <mat-form-field appearance="outline">
+                                <mat-select>
+                                    <mat-option value="2023">2023</mat-option>
+                                    <mat-option value="2024">2024</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+                        <div class="inp-field">
+                            <label for="" class="label">License Plate Number</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="inp-field">
+                            <label for="" class="label">VIN</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 px-3">
+                        <div class="inp-field mt-2 d-flex flex-column">
+                            <label for="" class="label">Insurance Expiry date</label>
+                            <mat-form-field appearance="outline">
+                                <input matInput [matDatepicker]="insuranceExpire">
+                                <mat-datepicker-toggle matIconSuffix [for]="insuranceExpire"></mat-datepicker-toggle>
+                                <mat-datepicker #insuranceExpire></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="inp-field mt-2 d-flex flex-column">
+                            <label for="" class="label">MVI Expiry Date</label>
+                            <mat-form-field appearance="outline">
+                                <input matInput [matDatepicker]="mviExpiryDate">
+                                <mat-datepicker-toggle matIconSuffix [for]="mviExpiryDate"></mat-datepicker-toggle>
+                                <mat-datepicker #mviExpiryDate></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="inp-field mt-2 d-flex flex-column">
+                            <label for="" class="label">Last Service Date</label>
+                            <mat-form-field appearance="outline">
+                                <input matInput [matDatepicker]="lastServiceDate">
+                                <mat-datepicker-toggle matIconSuffix [for]="lastServiceDate"></mat-datepicker-toggle>
+                                <mat-datepicker #lastServiceDate></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div class="inp-field mt-2 d-flex flex-column">
+                            <label for="" class="label">Next Service Due On</label>
+                            <mat-form-field appearance="outline">
+                                <input matInput [matDatepicker]="nextServiceDueOn">
+                                <mat-datepicker-toggle matIconSuffix [for]="nextServiceDueOn"></mat-datepicker-toggle>
+                                <mat-datepicker #nextServiceDueOn></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end gap-2 px-3 mb-2">
+                        <button class="btn btn-secondary">Reset</button>
+                        <button class="btn btn-primary">Add Trailer</button>
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </div>
+</div>
