@@ -71,6 +71,8 @@
                         [columnDefs]="columnDefs"
                         (firstDataRendered)="onFirstDataRendered($event)"
                         (rowClicked)="onRowClicked($event)"
+                        (rowValueChanged)="onRowValueChanged($event)"
+                        (cellValueChanged)="onCellValueChanged($event)"
                         [pagination]="pagination"
                         [paginationPageSize]="paginationPageSize"
                         [paginationPageSizeSelector]="paginationPageSizeSelector">

@@ -52,4 +52,12 @@ export class AllDriverComponent {
   }
 
   onRowClicked(event:any) {}
+
+  onRowValueChanged(event: any) {
+    // console.log('Row value changed:', event);
+  }
+
+  onCellValueChanged(event: any) {
+    // console.log('Cell value changed:', event);
+  }
 }

@@ -1,14 +1,14 @@
 <div class="popup">
     <div class="popup-header d-flex justify-content-between align-items-center">
-        <h2 class="m-0">License of ---</h2>
-        <button class="btn btn-close"></button>
+        <h2 class="m-0">License of {{data.name}}</h2>
+        <button class="btn" (click)="toClose()"><i class="fa-regular fa-circle-xmark"></i></button>
     </div>
     <div class="popup-body">
         <div class="popup-body--content">
-            <img [src]="data.src" alt="">
-        </div>
-        <div class="d-flex justify-content-end my-2 px-3">
-            <button class="btn btn-primary">Close</button>
+            <lib-ngx-image-zoom
+                [thumbImage] = data.src 
+                [fullImage] = data.src
+            ></lib-ngx-image-zoom>
         </div>
     </div>
 </div>

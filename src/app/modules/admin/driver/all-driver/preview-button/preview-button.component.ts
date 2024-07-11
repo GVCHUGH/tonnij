@@ -15,15 +15,17 @@ export class PreviewButtonComponent {
 
   public value! : string;
 
-  agInit(params: any) {this.value = params.value};
+  agInit(params: any) {this.value = params.data};
 
   refresh(params:any){return true}
 
   toPreview(value:any){
     this.dialog.open(PreviewLicenseComponent, {
       data :{
-        src: value
+        src: value.LicensePreview,
+        name: value.DriverName
       }
     })
+    // console.log(value.LicensePreview)
   }
 }

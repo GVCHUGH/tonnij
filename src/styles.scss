@@ -343,10 +343,10 @@ input:checked + .slider:before {
 
 .mdc-tab--active{
   .mat-mdc-tab-ripple{
-    background-color: #009393;
+    // background-color: #009393;
   }
   .mdc-tab__text-label{
-    color: #fff !important;
+    color: #009393 !important;
   }
   .mdc-tab-indicator__content{
     border-color: #009393 !important;
@@ -373,6 +373,14 @@ input:checked + .slider:before {
 }
 .ag-input-field-input{
   &:focus{
+    box-shadow: none !important;
+  }
+  &:focus-within{
+    box-shadow: none !important;
+  }
+}
+.ag-checkbox-input-wrapper{
+  &:focus-within{
     box-shadow: none !important;
   }
 }

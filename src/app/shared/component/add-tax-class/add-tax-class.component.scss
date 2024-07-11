@@ -20,19 +20,9 @@
         }
     }
     &-body{
-        &--content{
-            height: 80dvh;
-            overflow: hidden;
-            img{
-                width: 100px;
-                height: 100px;
-            }
-        }
+        padding: 10px 20px;
     }
 }
-::ng-deep{
-    .ngxImageZoomThumbnail{
-        width: 600px;
-        height: 80dvh;
-    }
+.inp-field{
+    width: 49%;
 }

@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <div class="submit">
-                            <button class="btn btn-primary w-100" routerLink="/dashboard">Sign In</button>
+                            <button class="btn btn-primary w-100" [routerLink]="!commomService.profileUpdated ? '/my-profile' : '/dashboard'">Sign In</button>
                         </div>
                         <div class="register mt-3">
                             <p class="m-0 text-center">Don't have account? <a routerLink="/registration">Register</a></p>

@@ -1,0 +1,28 @@
+<div class="popup">
+    <div class="popup-header d-flex justify-content-between align-items-center">
+        <h2 class="m-0">Add Tax Class</h2>
+        <button class="btn" (click)="toClose()"><i class="fa-regular fa-circle-xmark"></i></button>
+    </div>
+    <div class="popup-body">
+        <div class="d-flex gap-3">
+            <div class="inp-field d-flex flex-column">
+                <label for="" class="label">Tax Class</label>
+                <mat-form-field appearance="outline">
+                    <mat-select>
+                        <mat-option value="GST">GST</mat-option>
+                        <mat-option value="HST">HST</mat-option>
+                        <mat-option value="PST">PST</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="inp-field">
+                <label for="" class="label">Tax Rate</label>
+                <input type="text" class="form-control" name="" id="">
+            </div>
+        </div>
+        <div class="d-flex justify-content-end gap-2 mt-3">
+            <button class="btn btn-secondary" (click)="toClose()">Dismiss</button>
+            <button class="btn btn-primary">Add</button>
+        </div>
+    </div>
+</div>

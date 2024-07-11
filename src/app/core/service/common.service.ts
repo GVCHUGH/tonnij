@@ -7,5 +7,5 @@ export class CommonService {
 
   constructor() { }
 
-  profileUpdated:boolean = true;
+  profileUpdated:boolean = false;
 }

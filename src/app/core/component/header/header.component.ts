@@ -29,6 +29,7 @@ export class HeaderComponent {
         {subMenuItem: 'Trailers', route: '/all-trailers'},
         {subMenuItem: 'Customers', route: '/all-customer'},
         {subMenuItem: 'Vendors', route: '/all-vendor'},
+        {subMenuItem: 'My Profile', route: '/my-profile'},
       ]
     },
     {
