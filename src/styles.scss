@@ -6,6 +6,12 @@
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 
+/* Core Data Grid CSS */
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-quartz.css';
+
+
+
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Poppins', sans-serif; }
 .btn{
@@ -178,57 +184,6 @@ body { margin: 0; font-family: 'Poppins', sans-serif; }
 
 // toggle button
 
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 45px;
-  height: 22px;
-}
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc !important;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 15px;
-  width: 15px;
-  left: 4px;
-  bottom: 3.2px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #86ac1f  !important;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #86ac1f !important;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(22px);
-  -ms-transform: translateX(22px);
-  transform: translateX(22px);
-}
-
 /* Rounded sliders */
 .slider.round {
   border-radius: 34px !important;
@@ -271,17 +226,17 @@ input:checked + .slider:before {
   width: 20px;
   left: -1px;
   bottom: -0.8px;
-  background-color: white;
+  background-color: #009393;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #009393  !important;
+  background-color: #ccc  !important;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #009393 !important;
+  box-shadow: 0 0 1px #ccc !important;
 }
 
 input:checked + .slider:before {
@@ -401,3 +356,37 @@ input:checked + .slider:before {
 
 
 // End Material tabs
+
+// AG Grid style
+
+.ag-header.ag-header-allow-overflow .ag-header-row{
+  background-color: #009393;
+  color: #fff;
+  .ag-icon{
+    color: #fff;
+  }
+  .ag-header-cell-resize{
+    &::after{
+      background-color: #fff;
+    }
+  }
+}
+.ag-input-field-input{
+  &:focus{
+    box-shadow: none !important;
+  }
+}
+
+.ag-picker-field-wrapper{
+  &:focus-within{
+    box-shadow: none;
+  }
+}
+
+.ag-cell-value{
+  &:focus-within{
+    border-color: transparent !important;
+  }
+}
+
+// End AG Grid style

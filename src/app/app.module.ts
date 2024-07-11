@@ -20,6 +20,9 @@ import { AllCustomerComponent } from './modules/admin/customer/all-customer/all-
 import { AllTrailersComponent } from './modules/admin/trailers/all-trailers/all-trailers.component';
 import { AddTrailerComponent } from './modules/admin/trailers/add-trailer/add-trailer.component';
 import { ProfileComponent } from './modules/admin/profile/profile.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { PreviewButtonComponent } from './modules/admin/driver/all-driver/preview-button/preview-button.component';
+import { PreviewLicenseComponent } from './modules/admin/driver/all-driver/preview-license/preview-license.component';
 
 @NgModule({
   declarations: [
@@ -39,12 +42,15 @@ import { ProfileComponent } from './modules/admin/profile/profile.component';
     AllTrailersComponent,
     AddTrailerComponent,
     ProfileComponent,
+    PreviewButtonComponent,
+    PreviewLicenseComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    AgGridModule
   ],
   providers: [],
   bootstrap: [AppComponent]
