@@ -8,7 +8,7 @@
     label{
         border: 1px solid #ebebeb;
         width: 90%;
-        height: 170px;
+        height: 200px;
         margin: 20px auto;
         display: flex;
         justify-content: center;
@@ -27,7 +27,7 @@
     transition: all ease-in-out 0.5s;
     background-color: #0000004a;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     cursor: pointer;
     &-text{
         background-color: #009393;
@@ -60,10 +60,10 @@
 .profile-detail{
     span{
         // background-color: #009393;
-        border: 1px solid #009393;
-        border-radius: 6px;
+        border-bottom: 1px solid #009393;
+        // border-radius: 6px;
         padding: 5px 10px;
-        width: 49%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -86,8 +86,8 @@
 .document-detail{
     span{
         // background-color: #009393;
-        border: 1px solid #009393;
-        border-radius: 6px;
+        border-bottom: 1px solid #009393;
+        // border-radius: 6px;
         padding: 5px 10px;
         width: 100%;
         display: flex;
@@ -142,5 +142,10 @@
         .ag-center-cols-container{
             width: 100% !important;
         }
+    }
+}
+.accordion-button{
+    &:focus{
+        box-shadow: none;
     }
 }

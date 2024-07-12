@@ -35,7 +35,7 @@ export class HeaderComponent {
     {
       menuItem: 'Create Load', 
       menuIcon: '../../../../assets/icons/menu-icon/create-icon.svg', 
-      routerLink: '/', 
+      routerLink: '/create-load', 
       hasSubMenu: false
     },
     {

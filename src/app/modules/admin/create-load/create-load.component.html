@@ -1,0 +1,232 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 p-0">
+            <div class="sub-header d-flex justify-content-between">
+                <div class="sub-header--left">
+                    <span>Create Load</span>
+                </div>
+                <div class="sub-header--right">
+                    <span>Last Login : Jul 4, 2024, 7:48:41 PM</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-3 px-3">
+            <div class="content-area">
+                <div class="content-area--header px-3 d-flex justify-content-between align-items-center">
+                    <h3 class="m-0">Create Load</h3>
+                </div>
+                <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+                    <!-- <mat-tab label="Customer Info">
+                        <div class="content-area--section content-area--section__tabs">
+                            <div class="d-flex gap-2 px-3">
+                                <div class="inp-field mt-2 position-relative">
+                                    <input type="checkbox" id="favourite" class="checkbox-input form-check-input mt-0 position-absolute">
+                                    <label for="favourite" class="checkbox-label d-flex align-items-center gap-3">
+                                        My Load
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 px-3">
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Company Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Contact Person Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Building No/Unit No</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Street Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">City</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 px-3">
+                                <div class="inp-field mt-2 d-flex flex-column justify-content-between">
+                                    <label for="" class="label">Province</label>
+                                    <mat-form-field appearance="outline">
+                                        <mat-select>
+                                            <mat-option value="Alberta">Alberta</mat-option>
+                                            <mat-option value="Manitoba">Manitoba</mat-option>
+                                            <mat-option value="Yukon">Yukon</mat-option>
+                                        </mat-select>
+                                      </mat-form-field>
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Postal Code</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Cellphone Number</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Office Number</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Email</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 px-3">
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">FAX</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 px-3">
+                                <div class="inp-field mt-2 w-100">
+                                    <label for="" class="label">Payment Terms</label>
+                                    <textarea name="" id="" class="form-control" style="height: 100px;"></textarea>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end gap-2 px-3 mb-2 mt-3">
+                                <button class="btn btn-secondary">Reset</button>
+                                <button class="btn btn-primary">Next</button>
+                            </div>
+                        </div>
+                    </mat-tab> -->
+                    <mat-tab label="Load Info">
+                        <div class="content-area--section content-area--section__tabs">
+                            <div class="d-flex gap-2 px-3">
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Jobsite Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Pickup Date</label>
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <input matInput [matDatepicker]="licenseExpire">
+                                        <mat-datepicker-toggle matIconSuffix [for]="licenseExpire"></mat-datepicker-toggle>
+                                        <mat-datepicker #licenseExpire></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Pickup Time</label>
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <input matInput [matDatepicker]="licenseExpire">
+                                        <mat-datepicker-toggle matIconSuffix [for]="licenseExpire"></mat-datepicker-toggle>
+                                        <mat-datepicker #licenseExpire></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 px-3 legend-area position-relative mx-3 mt-4 pt-2 pb-3">
+                                <span class="legend position-absolute">Pickup</span>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Building No/Unit No</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Street Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">City</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="inp-field mt-2 d-flex flex-column justify-content-between">
+                                    <label for="" class="label">Province</label>
+                                    <mat-form-field appearance="outline">
+                                        <mat-select>
+                                            <mat-option value="Alberta">Alberta</mat-option>
+                                            <mat-option value="Manitoba">Manitoba</mat-option>
+                                            <mat-option value="Yukon">Yukon</mat-option>
+                                        </mat-select>
+                                      </mat-form-field>
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Postal Code</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="px-3 legend-area position-relative mx-3 mt-4 pt-2 pb-3">
+                                <span class="legend position-absolute">Drop</span>
+                                <div class="d-flex gap-2">
+                                    <div class="inp-field mt-2">
+                                        <label for="" class="label">Dump Name</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="inp-field mt-2">
+                                        <label for="" class="label">Building No/Unit No</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="inp-field mt-2">
+                                        <label for="" class="label">Street Name</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="inp-field mt-2">
+                                        <label for="" class="label">City</label>
+                                        <input type="text" class="form-control">
+                                    </div> 
+                                    <div class="inp-field mt-2 d-flex flex-column justify-content-between">
+                                        <label for="" class="label">Province</label>
+                                        <mat-form-field appearance="outline">
+                                            <mat-select>
+                                                <mat-option value="Alberta">Alberta</mat-option>
+                                                <mat-option value="Manitoba">Manitoba</mat-option>
+                                                <mat-option value="Yukon">Yukon</mat-option>
+                                            </mat-select>
+                                          </mat-form-field>
+                                    </div>
+                                </div> 
+                                <div class="d-flex gap-2">
+                                    <div class="inp-field mt-2">
+                                        <label for="" class="label">Postal Code</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end gap-2 px-3 mb-2 mt-3">
+                                <button class="btn btn-secondary">Reset</button>
+                                <button class="btn btn-primary">Next</button>
+                            </div>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Order Info">
+                        <div class="content-area--section content-area--section__tabs">
+                            <div class="d-flex gap-2 px-3">
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Order Prefix</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Order Series Number</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Date Format</label>
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-select>
+                                            <mat-option value="Jul 10, 2024">Jul 10, 2024</mat-option>
+                                            <mat-option value="10-Jul-2024">10-Jul-2024</mat-option>
+                                        </mat-select>
+                                      </mat-form-field>
+                                </div>
+                                <div class="inp-field mt-2">
+                                    <label for="" class="label">Time Format</label>
+                                    <mat-form-field appearance="outline" class="w-100">
+                                        <mat-select>
+                                            <mat-option value="10:24 AM">10:24 AM</mat-option>
+                                            <mat-option value="22:24">22:24</mat-option>
+                                        </mat-select>
+                                      </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end px-3 my-3">
+                                <button class="btn btn-primary">Update</button>
+                            </div>
+                        </div>
+                    </mat-tab>
+                  </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div>

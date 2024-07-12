@@ -14,6 +14,7 @@ import { AddVendorComponent } from './modules/admin/vendor/add-vendor/add-vendor
 import { AllTrailersComponent } from './modules/admin/trailers/all-trailers/all-trailers.component';
 import { AddTrailerComponent } from './modules/admin/trailers/add-trailer/add-trailer.component';
 import { ProfileComponent } from './modules/admin/profile/profile.component';
+import { CreateLoadComponent } from './modules/admin/create-load/create-load.component';
 
 const routes: Routes = [
   {path:'', component: LoginComponent},
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path:'all-trailers', component: AllTrailersComponent},
   {path:'add-trailer', component: AddTrailerComponent},
   {path:'my-profile', component: ProfileComponent},
+  {path:'create-load', component: CreateLoadComponent},
 ];
 
 @NgModule({

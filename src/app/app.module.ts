@@ -24,6 +24,7 @@ import { AgGridModule } from 'ag-grid-angular';
 import { PreviewButtonComponent } from './modules/admin/driver/all-driver/preview-button/preview-button.component';
 import { PreviewLicenseComponent } from './modules/admin/driver/all-driver/preview-license/preview-license.component';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { CreateLoadComponent } from './modules/admin/create-load/create-load.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
     ProfileComponent,
     PreviewButtonComponent,
     PreviewLicenseComponent,
+    CreateLoadComponent,
   ],
   imports: [
     BrowserModule,

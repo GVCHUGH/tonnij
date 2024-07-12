@@ -32,7 +32,7 @@
                     </label>
                     <input type="file" name="" id="fileUpload" hidden>
                 </div>
-                <div class="profile-detail px-4 d-flex flex-wrap gap-2">
+                <!-- <div class="profile-detail px-4 d-flex flex-wrap gap-2">
                     <span>Drivers <span>2</span></span>
                     <span>Trucks <span>2</span></span>
                     <span>Trailers <span>2</span></span>
@@ -44,7 +44,44 @@
                     <span>COI Certificate <span><i class="fa-regular fa-circle-xmark"></i></span></span>
                     <span>NSC Certificate <span><i class="fa-regular fa-circle-check"></i></span></span>
                     <span>Business Registration Certificate <span><i class="fa-regular fa-circle-xmark"></i></span></span>
-                </div>
+                </div> -->
+                <div class="accordion accordion-flush px-4" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+                          Master Data
+                        </button>
+                      </h2>
+                      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" style="">
+                        <div class="accordion-body p-2 pt-0">
+                            <div class="profile-detail d-flex flex-column">
+                                <span>Drivers <span>2</span></span>
+                                <span>Trucks <span>2</span></span>
+                                <span>Trailers <span>2</span></span>
+                                <span>Customers <span>2</span></span>
+                                <span>Vendors <span>2</span></span>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+                          Master Document
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample" style="">
+                        <div class="accordion-body p-2 pt-0">
+                            <div class="document-detail d-flex flex-column">
+                                <span>WCB Certificate <span><i class="fa-regular fa-circle-check"></i></span></span>
+                                <span>COI Certificate <span><i class="fa-regular fa-circle-xmark"></i></span></span>
+                                <span>NSC Certificate <span><i class="fa-regular fa-circle-check"></i></span></span>
+                                <span>Business Registration Certificate <span><i class="fa-regular fa-circle-xmark"></i></span></span>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </div>
         <div class="col-md-8 mt-3">
