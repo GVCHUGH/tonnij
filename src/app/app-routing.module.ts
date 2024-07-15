@@ -15,6 +15,10 @@ import { AllTrailersComponent } from './modules/admin/trailers/all-trailers/all-
 import { AddTrailerComponent } from './modules/admin/trailers/add-trailer/add-trailer.component';
 import { ProfileComponent } from './modules/admin/profile/profile.component';
 import { CreateLoadComponent } from './modules/admin/create-load/create-load.component';
+import { DispatchBoardComponent } from './modules/admin/dispatch-board/dispatch-board.component';
+import { CompleteBoardComponent } from './modules/admin/complete-board/complete-board.component';
+import { InvoiceComponent } from './modules/admin/invoice/invoice.component';
+import { InvoicePageComponent } from './modules/admin/invoice/invoice-page/invoice-page.component';
 
 const routes: Routes = [
   {path:'', component: LoginComponent},
@@ -33,6 +37,10 @@ const routes: Routes = [
   {path:'add-trailer', component: AddTrailerComponent},
   {path:'my-profile', component: ProfileComponent},
   {path:'create-load', component: CreateLoadComponent},
+  {path:'dispatch-board', component: DispatchBoardComponent},
+  {path:'complete-board', component: CompleteBoardComponent},
+  {path:'invoice', component: InvoiceComponent},
+  {path:'invoice-page/:id', component: InvoicePageComponent},
 ];
 
 @NgModule({

@@ -1,0 +1,51 @@
+.content-area--section{
+    max-height: 78dvh;
+}
+.invoice-detail{
+    span{
+        font-size: 0.875rem;
+        color: #009393;
+        font-weight: 600;
+        span{
+            font-size: 1rem;
+            color: #212529;
+            font-weight: 400;
+            margin-top: -5px;
+            display: block;
+        }
+    }
+    &--fromTo{
+        h2{
+            font-size: 1.25rem;
+            color: #009393;
+        }
+        span{
+            font-size: 1rem;
+            font-weight: 600;
+            color: #414141;
+        }
+        pre{
+            font-family:  'Poppins', sans-serif;
+        }
+    }
+    &--pickup{
+        span{
+            font-size: 1rem;
+            font-weight: 600;
+            color: #009393;
+        }
+        p{
+            font-size: 0.875rem;
+        }
+    }
+}
+.subtotal{
+    background-color: #eeeeee;
+    padding: 10px 20px;
+    &-label{
+        font-weight: 600;
+    }
+    span{
+        font-size: 1rem;
+    }
+}

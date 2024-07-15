@@ -25,6 +25,12 @@ import { PreviewButtonComponent } from './modules/admin/driver/all-driver/previe
 import { PreviewLicenseComponent } from './modules/admin/driver/all-driver/preview-license/preview-license.component';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
 import { CreateLoadComponent } from './modules/admin/create-load/create-load.component';
+import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { DispatchBoardComponent } from './modules/admin/dispatch-board/dispatch-board.component';
+import { CompleteBoardComponent } from './modules/admin/complete-board/complete-board.component';
+import { InvoiceComponent } from './modules/admin/invoice/invoice.component';
+import { InvoiceBtnComponent } from './modules/admin/invoice/invoice-btn/invoice-btn.component';
+import { InvoicePageComponent } from './modules/admin/invoice/invoice-page/invoice-page.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +53,11 @@ import { CreateLoadComponent } from './modules/admin/create-load/create-load.com
     PreviewButtonComponent,
     PreviewLicenseComponent,
     CreateLoadComponent,
+    DispatchBoardComponent,
+    CompleteBoardComponent,
+    InvoiceComponent,
+    InvoiceBtnComponent,
+    InvoicePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,7 +65,8 @@ import { CreateLoadComponent } from './modules/admin/create-load/create-load.com
     BrowserAnimationsModule,
     SharedModule,
     AgGridModule,
-    NgxImageZoomModule
+    NgxImageZoomModule,
+    NgxMaterialTimepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

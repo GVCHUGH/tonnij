@@ -41,19 +41,19 @@ export class HeaderComponent {
     {
       menuItem: 'Dispatch Board', 
       menuIcon: '../../../../assets/icons/menu-icon/dispatch-icon.svg', 
-      routerLink: '/', 
+      routerLink: '/dispatch-board', 
       hasSubMenu: false
     },
     {
-      menuItem: 'Complete Load', 
+      menuItem: 'Completed Board', 
       menuIcon: '../../../../assets/icons/menu-icon/complete-icon.svg', 
-      routerLink: '/', 
+      routerLink: '/complete-board', 
       hasSubMenu: false
     },
     {
       menuItem: 'Invoice', 
       menuIcon: '../../../../assets/icons/menu-icon/invoice-icon.svg', 
-      routerLink: '/', 
+      routerLink: '/invoice', 
       hasSubMenu: false
     },
   ]

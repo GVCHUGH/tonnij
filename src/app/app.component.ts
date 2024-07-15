@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { Component, SimpleChanges } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -15,12 +15,14 @@ export class AppComponent {
 
   constructor(
     private router: Router,
+    private route : ActivatedRoute
   ) { }
 
+  invoiceId:any;
   ngOnInit(): void {
     this.routerSubscription = this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
-        if(event.url == '/' || event.url == '/login' || event.url == '/registration'){
+        if(event.url == '/' || event.url == '/login' || event.url == '/registration' || event.url == '/invoice-page'){
           this.showHeader = false;
         } else {
           this.showHeader = true;

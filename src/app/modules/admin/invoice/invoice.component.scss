@@ -1,0 +1,59 @@
+.main-card{
+    background-color: #F4FFFF;
+    border-color: #E6F7F7;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-width: 2px;
+    &:hover{
+        border-bottom: 2px solid #009393;
+    }
+    .thumbnail{
+        background-color: #fff;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        flex-shrink: 0;
+        box-shadow: 0 4px 4px 0 #00000010, -0 -4px 4px 0 #00000010;
+    }
+    .content{
+        p{
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        span{
+            font-size: 1rem;
+            font-weight: 600;
+            color: #009393;
+        }
+    }
+}
+.sub-card{
+    border-color: #E6F7F7;
+    padding: 10px 20px;
+    .content{
+        p{
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        span{
+            font-size: 0.875rem;
+            .expiring{
+                color: #009393;
+                font-weight: 700;
+            }
+            .expired{
+                color: red;
+                font-weight: 700;
+            }
+        }
+    }
+}
+.content-area--section{
+    max-height: 67dvh;
+}
+.content-area--section__tabs{
+    max-height: 48dvh;
+}
+.active-card{
+    border-bottom: 2px solid #009393;
+}

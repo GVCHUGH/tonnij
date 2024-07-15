@@ -1,0 +1,85 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 p-0">
+            <div class="sub-header d-flex justify-content-between">
+                <div class="sub-header--left">
+                    <span>Dispatch Board</span>
+                </div>
+                <div class="sub-header--right">
+                    <span>Last Login : Jul 4, 2024, 7:48:41 PM</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 p-0">
+            <div class="row mx-1 mt-3">
+                <div class="col-md-2 pe-0" (click)="getTableData('All')">
+                    <div class="card main-card d-flex flex-row align-items-center gap-3" [ngClass]="tableFilter == 'All' ? 'active-card' : ''">
+                        <div class="thumbnail d-flex justify-content-center align-items-center">
+                            <img src="../../../../assets/icons/driver-icon.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="m-0">All</p>
+                            <span>20</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 pe-0" (click)="getTableData('Available')">
+                    <div class="card main-card d-flex flex-row align-items-center gap-3" [ngClass]="tableFilter == 'Available' ? 'active-card' : ''">
+                        <div class="thumbnail d-flex justify-content-center align-items-center">
+                            <img src="../../../../assets/icons/driver-icon.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="m-0">Available</p>
+                            <span>20</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 pe-0" (click)="getTableData('Dispatched')">
+                    <div class="card main-card d-flex flex-row align-items-center gap-3" [ngClass]="tableFilter == 'Dispatched' ? 'active-card' : ''">
+                        <div class="thumbnail d-flex justify-content-center align-items-center">
+                            <img src="../../../../assets/icons/driver-icon.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="m-0">Dispatched</p>
+                            <span>20</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 pe-0" (click)="getTableData('Partial')">
+                    <div class="card main-card d-flex flex-row align-items-center gap-3" [ngClass]="tableFilter == 'Partial' ? 'active-card' : ''">
+                        <div class="thumbnail d-flex justify-content-center align-items-center">
+                            <img src="../../../../assets/icons/driver-icon.svg" alt="">
+                        </div>
+                        <div class="content">
+                            <p class="m-0">Partial</p>
+                            <span>20</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-3 px-3">
+            <div class="content-area">
+                <div class="content-area--header px-3 d-flex justify-content-between align-items-center">
+                    <h3 class="m-0">Dispatch Board</h3>
+                </div>
+                <div class="content-area--section">
+                    <ag-grid-angular
+                        #agGrid
+                        style="width: 100%; height: 484px;"
+                        class="ag-theme-quartz"
+                        [rowData]="rowData"
+                        [columnDefs]="columnDefs"
+                        (firstDataRendered)="onFirstDataRendered($event)"
+                        (rowClicked)="onRowClicked($event)"
+                        (rowValueChanged)="onRowValueChanged($event)"
+                        (cellValueChanged)="onCellValueChanged($event)"
+                        [pagination]="pagination"
+                        [paginationPageSize]="paginationPageSize"
+                        [paginationPageSizeSelector]="paginationPageSizeSelector">
+                    </ag-grid-angular>
+                </div>      
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,12 +7,12 @@
                         <img src="../../../../assets/images/logo.png" alt="">
                     </div>
                     <div class="header-left--menu d-flex" *ngIf="commonService.profileUpdated">
-                        <div class="header-left--menu__section position-relative d-flex flex-column align-items-center justify-content-center" *ngFor="let menu of menuList; let last = last" [class.last-item]="last" [routerLink]="menu.routerLink">
+                        <div class="header-left--menu__section position-relative d-flex gap-2 align-items-center justify-content-center" *ngFor="let menu of menuList; let last = last" [class.last-item]="last" [routerLink]="menu.routerLink">
                             <div class="d-flex align-items-center gap-2">
                                 <img [src]="menu.menuIcon" alt="">
-                                <img class="mt-1" src="../../../../assets/icons/down-arrow-icon.svg" alt=""  *ngIf="menu.menuItem == 'Home'" width="8">
                             </div>
                             <span>{{menu.menuItem}}</span>
+                            <img src="../../../../assets/icons/down-arrow-icon.svg" alt=""  *ngIf="menu.menuItem == 'Home'" width="8">
                             <div class="sub-menu d-flex flex-column">
                                 <span *ngFor="let item of menu.subMenu" [routerLink]="item.route">{{item.subMenuItem}}</span>
                             </div>
